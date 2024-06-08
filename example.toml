@@ -9,6 +9,10 @@ white-wash = "/Users/andy/Dropbox/Documents/House/Master Bathroom Remodel/Tile/F
 width = 24
 height = 24
 
+[grout]
+color = "white"
+width = 1
+
 [layout]
 width = 16
 height = 5
