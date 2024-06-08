@@ -6,3 +6,7 @@
 #
 -e .
     # via -r requirements.in
+click==8.1.7
+    # via random-tile-generator
+pillow==10.3.0
+    # via random-tile-generator
