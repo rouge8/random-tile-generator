@@ -1,41 +1,28 @@
-python-template
-===============
+random-tile-generator
+=====================
 
-A template for Python applications.
+Generate random tile layouts, e.g. for backsplash, bathrooms, etc.
 
-Creating a new project
-----------------------
+Installation
+------------
 
-This template is different from most project templates in that this is intended
-to keep your project up to date with changes to the template by treating the
-template as another git branch.
+1. Create a virtualenv.
+2. ``pip install -r requirements.txt``
 
-1. Create a git repository with the ``template`` origin:
+Usage
+-----
 
-   .. code-block:: sh
+.. code-block:: sh
 
-      git clone git@github.com:rouge8/python-template.git YOUR_PROJECT
-      cd YOUR_PROJECT
-      git remote rename origin template
+   random-tile-generator PATH_TO_CONFIG PATH_TO_OUTPUT
 
-2. Update the template with your project's details:
+Configuration
+-------------
 
-   .. code-block:: sh
+See ``example.toml``.
 
-      # Rename the application directory
-      git mv src/python_template src/YOUR_PROJECT
-
-      # Find and replace all instances of 'python-template' / 'python_template'
-      # with 'your-project' / 'your_project'
-      git grep python.template
-
-3. Commit your changes and push them to your Git repository.
-
-Keeping up to date
-------------------
-
-The strength of this approach to a template repository is that it makes keeping
-up to date as easy as a ``git merge`` and resolving any conflicts:
+Keeping up to date with the template
+------------------------------------
 
 .. code-block:: sh
 
