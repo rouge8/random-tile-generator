@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "python_template"
+name = "random_tile_generator"
 authors = [{name = "Andy Freeland", email = "andy@andyfreeland.net"}]
 classifiers = [
   "License :: OSI Approved :: MIT License",
@@ -13,7 +13,7 @@ dynamic = ["version", "description"]
 requires-python = ">=3.12"
 
 [project.urls]
-Home = "https://github.com/rouge8/python-template"
+Home = "https://github.com/rouge8/random_tile_generator"
 
 [tool.pytest.ini_options]
 addopts = "--strict-config --strict-markers"
@@ -24,7 +24,7 @@ allow_redefinition = true
 warn_unreachable = true
 
 [tool.hatch.version]
-path = "src/python_template/__init__.py"
+path = "src/random_tile_generator/__init__.py"
 
 [tool.ruff]
 target-version = "py312"

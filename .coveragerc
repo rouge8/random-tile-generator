@@ -1,7 +1,7 @@
 [run]
 branch = True
 source =
-    python_template
+    random_tile_generator
     tests
 
 [report]
