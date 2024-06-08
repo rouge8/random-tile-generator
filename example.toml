@@ -1,0 +1,21 @@
+[images]
+aegean-sea = "/Users/andy/Dropbox/Documents/House/Master Bathroom Remodel/Tile/Fireclay/Aegean Sea.png"
+azul = "/Users/andy/Dropbox/Documents/House/Master Bathroom Remodel/Tile/Fireclay/Azul.png"
+caribbean = "/Users/andy/Dropbox/Documents/House/Master Bathroom Remodel/Tile/Fireclay/Caribbean.png"
+lake-tahoe = "/Users/andy/Dropbox/Documents/House/Master Bathroom Remodel/Tile/Fireclay/Lake Tahoe.png"
+white-wash = "/Users/andy/Dropbox/Documents/House/Master Bathroom Remodel/Tile/Fireclay/White Wash.png"
+
+[tile-size]
+width = 24
+height = 24
+
+[layout]
+width = 16
+height = 5
+
+[ratios]
+aegean-sea = 60
+azul = 10
+caribbean = 10
+lake-tahoe = 10
+white-wash = 10
