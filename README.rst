@@ -6,15 +6,23 @@ Generate random tile layouts, e.g. for backsplash, bathrooms, etc.
 Installation
 ------------
 
-1. Create a virtualenv.
-2. ``pip install -r requirements.txt``
+With uv:
+^^^^^^^^
+
+1. ``uv sync``
+
+With mise:
+^^^^^^^^^^
+
+1. ``mise trust``
+2. ``mise install``
 
 Usage
 -----
 
 .. code-block:: sh
 
-   random-tile-generator PATH_TO_CONFIG PATH_TO_OUTPUT
+   uv run random-tile-generator PATH_TO_CONFIG PATH_TO_OUTPUT
 
 Configuration
 -------------

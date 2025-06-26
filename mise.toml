@@ -1,5 +1,10 @@
 [tools]
-python = "3.12"
+python = "3.13"
 
 [env]
 _.python.venv = { path = ".venv", create = true }
+
+[hooks]
+postinstall = [
+  "uv sync",
+]
