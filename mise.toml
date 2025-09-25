@@ -6,5 +6,5 @@ _.python.venv = { path = ".venv", create = true }
 
 [hooks]
 postinstall = [
-  "uv sync",
+  "uv sync --active",
 ]
