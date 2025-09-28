@@ -61,8 +61,8 @@ def cli(config: io.BytesIO, output: str) -> None:
             result.paste(
                 tile,
                 (
-                    max(col * (tile_width + grout_width), 1),
-                    max(row * (tile_height + grout_width), 1),
+                    (col * (tile_width + grout_width)) + grout_width,
+                    (row * (tile_height + grout_width)) + grout_width,
                 ),
             )
 
