@@ -11,6 +11,15 @@ on:
   workflow_dispatch:
 
 jobs:
+  pre-commit:
+    name: pre-commit
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+      - uses: pre-commit/action@v3.0.1
+
   tox:
     name: ${{ matrix.toxenv }}
     runs-on: ubuntu-latest
@@ -22,7 +31,6 @@ jobs:
       matrix:
         toxenv:
           - py,test-coverage
-          - lint
           - mypy
 
     steps:
