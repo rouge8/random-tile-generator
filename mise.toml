@@ -1,12 +1,20 @@
 [tools]
-pre-commit = "latest"
+prek = "latest"
 python = "3.14.0"
 
 [env]
 _.python.venv = { path = ".venv", create = true }
 
-[hooks]
-postinstall = [
+[tasks.setup]
+sources = ["pyproject.toml", "uv.lock"]
+run = [
   "uv sync --active",
-  "pre-commit install",
+  "prek install",
 ]
+
+[tasks.test]
+depends = ["setup"]
+run = "tox"
+
+[tasks.lint]
+run = "prek run --all-files"

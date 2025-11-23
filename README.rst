@@ -15,7 +15,7 @@ With mise:
 ^^^^^^^^^^
 
 1. ``mise trust``
-2. ``mise install``
+2. ``mise run setup``
 
 Usage
 -----
@@ -28,6 +28,13 @@ Configuration
 -------------
 
 See ``example.toml``.
+
+Development
+-----------
+
+Development tools and dependencies are managed with `mise
+<https://mise.jdx.dev/>`_. Run ``mise run setup`` to install all tools and
+dependencies.
 
 Keeping up to date with the template
 ------------------------------------
