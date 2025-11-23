@@ -3,6 +3,13 @@ python-template
 
 A template for Python applications.
 
+Development
+-----------
+
+Development tools and dependencies are managed with `mise
+<https://mise.jdx.dev/>`_. Run ``mise run setup`` to install all tools and
+dependencies.
+
 Creating a new project
 ----------------------
 
