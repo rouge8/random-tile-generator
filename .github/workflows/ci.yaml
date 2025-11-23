@@ -11,6 +11,15 @@ on:
   workflow_dispatch:
 
 jobs:
+  pre-commit:
+    name: pre-commit
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+      - uses: pre-commit/action@v3.0.1
+
   tox:
     name: ${{ matrix.toxenv }}
     runs-on: ubuntu-latest
@@ -22,30 +31,19 @@ jobs:
       matrix:
         toxenv:
           - py,test-coverage
-          - lint
           - mypy
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
-          python-version: "3.14"
+          python-version-file: pyproject.toml
       - name: Generate the cache suffix
         id: cache-suffix
         run: |
           echo cache-suffix=${TOXENV//,/-} >> $GITHUB_OUTPUT
-      - uses: actions/cache@v4
+      - uses: astral-sh/setup-uv@v7
         with:
-          path: |
-            ~/.cache/pip
-            ~/.cache/pre-commit
-            .mypy_cache
-          key: ${{ runner.os }}-pip-${{ steps.cache-suffix.outputs.cache-suffix }}
-      - name: Install dependencies
-        run: |
-          set -xe
-          python -VV
-          python -m pip install --upgrade pip setuptools wheel
-          python -m pip install --upgrade virtualenv tox
+          cache-suffix: ${{ steps.cache-suffix.outputs.cache-suffix }}
       - name: tox
-        run: python -m tox
+        run: uvx tox

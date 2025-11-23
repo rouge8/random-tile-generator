@@ -1,4 +1,5 @@
 [tools]
+pre-commit = "latest"
 python = "3.14.0"
 
 [env]
@@ -7,4 +8,5 @@ _.python.venv = { path = ".venv", create = true }
 [hooks]
 postinstall = [
   "uv sync --active",
+  "pre-commit install",
 ]
