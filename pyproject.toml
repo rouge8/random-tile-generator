@@ -23,8 +23,13 @@ random-tile-generator = "random_tile_generator.__main__:cli"
 [project.urls]
 Home = "https://github.com/rouge8/random_tile_generator"
 
-[tool.pytest.ini_options]
-addopts = "--strict-config --strict-markers"
+[tool.pytest]
+minversion = "9.0"
+addopts = [
+  "-ra",
+  "--strict-config",
+  "--strict-markers",
+]
 
 [tool.mypy]
 strict = true
