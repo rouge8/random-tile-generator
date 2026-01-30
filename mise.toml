@@ -5,6 +5,8 @@ python = "3.14.2"
 [env]
 _.python.venv = { path = ".venv", create = true }
 
+UV_PREVIEW_FEATURES = "add-bounds"
+
 [tasks.setup]
 sources = ["pyproject.toml", "uv.lock"]
 run = [

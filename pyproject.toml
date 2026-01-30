@@ -31,6 +31,9 @@ warn_unreachable = true
 [tool.hatch.version]
 path = "src/python_template/__init__.py"
 
+[tool.uv]
+add-bounds = "exact"
+
 [tool.ruff]
 target-version = "py314"
 select = [
