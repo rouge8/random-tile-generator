@@ -12,8 +12,23 @@ classifiers = [
 dynamic = ["version", "description"]
 requires-python = "~=3.14.0"
 
+[dependency-groups]
+dev = [
+    "coverage~=7.12.0",
+    "mypy~=1.19.0",
+    "pytest~=9.0.0",
+    "pytest-cov~=7.0.0",
+    "pytest-randomly~=4.0.1",
+]
+
 [project.urls]
 Home = "https://github.com/rouge8/python-template"
+
+[tool.hatch.version]
+path = "src/python_template/__init__.py"
+
+[tool.uv]
+add-bounds = "exact"
 
 [tool.pytest]
 minversion = "9.0"
@@ -27,12 +42,6 @@ addopts = [
 strict = true
 allow_redefinition = true
 warn_unreachable = true
-
-[tool.hatch.version]
-path = "src/python_template/__init__.py"
-
-[tool.uv]
-add-bounds = "exact"
 
 [tool.ruff]
 target-version = "py314"
@@ -78,12 +87,3 @@ order-by-type = false
 
 [tool.ruff.flake8-implicit-str-concat]
 allow-multiline = false
-
-[dependency-groups]
-dev = [
-    "coverage~=7.12.0",
-    "mypy~=1.19.0",
-    "pytest~=9.0.0",
-    "pytest-cov~=7.0.0",
-    "pytest-randomly~=4.0.1",
-]
