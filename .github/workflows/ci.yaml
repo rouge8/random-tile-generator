@@ -42,7 +42,7 @@ jobs:
         id: cache-suffix
         run: |
           echo cache-suffix=${TOXENV//,/-} >> $GITHUB_OUTPUT
-      - uses: astral-sh/setup-uv@v7
+      - uses: astral-sh/setup-uv@v8.1.0
         with:
           cache-suffix: ${{ steps.cache-suffix.outputs.cache-suffix }}
       - name: tox
