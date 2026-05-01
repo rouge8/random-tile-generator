@@ -45,6 +45,8 @@ warn_unreachable = true
 
 [tool.ruff]
 target-version = "py314"
+
+[tool.ruff.lint]
 select = [
   "E",
   "F",
@@ -80,10 +82,10 @@ ignore = [
   "ISC003",
 ]
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 force-single-line = true
 force-sort-within-sections = true
 order-by-type = false
 
-[tool.ruff.flake8-implicit-str-concat]
+[tool.ruff.lint.flake8-implicit-str-concat]
 allow-multiline = false
