@@ -1,15 +1,25 @@
 [tools]
 prek = "latest"
-python = "3.14.2"
+python = "3.14.4"
+"pipx:gha-update" = "latest"
 
 [env]
 _.python.venv = { path = ".venv", create = true }
+
+UV_PREVIEW_FEATURES = "add-bounds"
 
 [tasks.setup]
 sources = ["pyproject.toml", "uv.lock"]
 run = [
   "uv sync --active",
   "prek install",
+]
+
+[tasks.upgrade-deps]
+run = [
+  "uv sync --upgrade --all-groups",
+  "prek auto-update",
+  "gha-update",
 ]
 
 [tasks.test]

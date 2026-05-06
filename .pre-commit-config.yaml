@@ -23,7 +23,7 @@ repos:
           - --no-sort-keys
       - id: check-toml
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.37.1
+    rev: v1.38.0
     hooks:
       - id: yamllint
         args:
@@ -34,13 +34,13 @@ repos:
       - id: python-check-mock-methods
       - id: rst-backticks
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.13.1
+    rev: v0.15.12
     hooks:
       - id: ruff-check
         args: [--fix, --exit-non-zero-on-fix]
       - id: ruff-format
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.8.19
+    rev: 0.11.10
     hooks:
       - id: uv-lock
   - repo: https://github.com/PyCQA/doc8
@@ -75,6 +75,6 @@ repos:
             fi
           '
   - repo: https://github.com/renovatebot/pre-commit-hooks
-    rev: 41.131.8
+    rev: 43.150.0
     hooks:
       - id: renovate-config-validator
