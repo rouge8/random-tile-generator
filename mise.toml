@@ -1,6 +1,7 @@
 [tools]
 prek = "latest"
 python = "3.14.4"
+"pipx:gha-update" = "latest"
 
 [env]
 _.python.venv = { path = ".venv", create = true }
@@ -15,7 +16,11 @@ run = [
 ]
 
 [tasks.upgrade-deps]
-run = "uv sync --upgrade --all-groups"
+run = [
+  "uv sync --upgrade --all-groups",
+  "prek auto-update",
+  "gha-update",
+]
 
 [tasks.test]
 depends = ["setup"]
