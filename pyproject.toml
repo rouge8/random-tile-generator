@@ -27,9 +27,6 @@ Home = "https://github.com/rouge8/python-template"
 [tool.hatch.version]
 path = "src/python_template/__init__.py"
 
-[tool.uv]
-add-bounds = "exact"
-
 [tool.pytest]
 minversion = "9.0"
 addopts = [
