@@ -15,7 +15,7 @@ requires-python = "~=3.14.0"
 [dependency-groups]
 dev = [
     "coverage==7.13.5",
-    "mypy==1.20.2",
+    "pyrefly==1.1.1",
     "pytest==9.0.3",
     "pytest-cov==7.1.0",
     "pytest-randomly==4.1.0",
@@ -36,10 +36,8 @@ addopts = [
   "--strict-markers",
 ]
 
-[tool.mypy]
-strict = true
-allow_redefinition = true
-warn_unreachable = true
+[tool.pyrefly]
+preset = "strict"
 
 [tool.ruff]
 target-version = "py314"
