@@ -3,7 +3,7 @@ minimum_release_age = "7d"
 
 [tools]
 prek = "latest"
-python = "3.14.4"
+python = "3.14.7"
 "pipx:gha-update" = "latest"
 
 [env]
